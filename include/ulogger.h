@@ -11,7 +11,7 @@ struct _logger_t {
 
 struct _logger_t logger_t;
 
-static inline logger_log(logger_t * logger, size_t log_level, char fmt[], ...){
+void logger_log(logger_t * logger, size_t log_level, char fmt[], ...){
     fputs(logger->level_prefix[log_level]);
 
     va_list args;
